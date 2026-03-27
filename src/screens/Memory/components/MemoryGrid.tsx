@@ -17,7 +17,7 @@ export default function MemoryGrid({
   const { width } = useWindowDimensions();
 
   const gap = 10;
-  const boardHorizontalPadding = 24; // board wrapper + inner spacing
+  const boardHorizontalPadding = 40; // board wrapper + inner spacing
   const itemWidth =
     (width - boardHorizontalPadding - gap * (columns - 1) - 32) / columns;
 

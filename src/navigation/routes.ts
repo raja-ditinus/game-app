@@ -7,5 +7,7 @@ export const ROUTES = {
   BRICKBREAKER:'BrickBreaker',
    MEMORY: 'Memory',
    FRUITSLICE: 'FruitSlice',
+   ARCHERY: 'Archery',
+   SPACESHOOTER:'SpaceShooter'
 
 } as const;

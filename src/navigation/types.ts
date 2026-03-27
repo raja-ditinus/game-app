@@ -7,4 +7,6 @@ export type RootStackParamList = {
   BrickBreaker: undefined;
   Memory: undefined;
   FruitSlice: undefined;
+  Archery: undefined;
+  SpaceShooter:undefined;
 };
