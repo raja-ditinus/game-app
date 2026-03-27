@@ -8,6 +8,7 @@ export const ROUTES = {
    MEMORY: 'Memory',
    FRUITSLICE: 'FruitSlice',
    ARCHERY: 'Archery',
-   SPACESHOOTER:'SpaceShooter'
+   SPACESHOOTER:'SpaceShooter',
+   FlappyBird:'FlappyBird',
 
 } as const;

@@ -12,6 +12,7 @@ import MemoryScreen from '../screens/Memory/MemoryScreen';
 import FruitSliceScreen from '../screens/FruitSlice/FruitSliceScreen';
 import ArcheryScreen from '../screens/Archery/ArcheryScreen';
 import SpaceShooterScreen from '../screens/SpaceShooter/SpaceShooterScreen';
+import FlappyBirdScreen from '../screens/FlappyBird/FlappyBirdScreen';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -27,7 +28,8 @@ export default function AppNavigator() {
       <Stack.Screen name={ROUTES.MEMORY} component={MemoryScreen} />
       <Stack.Screen name={ROUTES.FRUITSLICE} component={FruitSliceScreen} />
       <Stack.Screen name={ROUTES.ARCHERY} component={ArcheryScreen} />
-       <Stack.Screen name={ROUTES.SPACESHOOTER} component={SpaceShooterScreen} />
+      <Stack.Screen name={ROUTES.SPACESHOOTER} component={SpaceShooterScreen} />
+       <Stack.Screen name={ROUTES.FlappyBird} component={FlappyBirdScreen} />
     </Stack.Navigator>
   );
 }

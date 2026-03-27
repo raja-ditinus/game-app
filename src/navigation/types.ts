@@ -9,4 +9,5 @@ export type RootStackParamList = {
   FruitSlice: undefined;
   Archery: undefined;
   SpaceShooter:undefined;
+  FlappyBird:undefined;
 };

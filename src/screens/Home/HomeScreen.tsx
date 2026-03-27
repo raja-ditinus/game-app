@@ -81,6 +81,12 @@ export default function HomeScreen({ navigation }: Props) {
               icon={<SpaceShipIcon size={28} />}
               onPress={() => navigation.navigate(ROUTES.SPACESHOOTER)}
             />
+            <GameCard
+              title="Flappy Master"
+              subtitle="Tap to fly and avoid obstacles"
+              emoji="🐦"
+              onPress={() => navigation.navigate(ROUTES.FlappyBird)}
+            />
           </View>
         </ScrollView>
       </Container>
