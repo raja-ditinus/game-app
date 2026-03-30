@@ -11,12 +11,12 @@ export function createPipe(id: string): PipeType {
   const minGapY = 150;
   const maxGapY = GAME_BOTTOM - 150;
 
-  return {
-    id,
-    x: SCREEN_WIDTH,
-    gapY: minGapY + Math.random() * (maxGapY - minGapY),
-    passed: false,
-  };
+return {
+  id,
+  x: SCREEN_WIDTH - 40,
+  gapY: minGapY + Math.random() * (maxGapY - minGapY),
+  passed: false,
+};
 }
 
 export function didBirdHitGround(birdY: number): boolean {

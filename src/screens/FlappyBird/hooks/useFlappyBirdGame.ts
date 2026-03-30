@@ -105,21 +105,23 @@ export function useFlappyBirdGame() {
     setFlashHit(false);
   }, [clearAll]);
 
-  const startGame = useCallback(() => {
-    if (isStarted || isStarting) return;
+const startGame = useCallback(() => {
+  if (isStarted || isStarting) return;
 
-    setIsStarting(true);
-    setBird({ x: BIRD_X, y: 220, velocity: 0, size: BIRD_SIZE });
-    setPipes([]);
-    setScore(0);
-    setIsGameOver(false);
-    setFlashHit(false);
+  setIsStarting(true);
+  setBird({ x: BIRD_X, y: 220, velocity: 0, size: BIRD_SIZE });
+  setScore(0);
+  setIsGameOver(false);
+  setFlashHit(false);
 
-    requestAnimationFrame(() => {
-      setIsStarted(true);
-      setIsStarting(false);
-    });
-  }, [isStarted, isStarting]);
+  pipeIdRef.current = 1;
+  setPipes([createPipe(`pipe-${pipeIdRef.current}`)]);
+
+  requestAnimationFrame(() => {
+    setIsStarted(true);
+    setIsStarting(false);
+  });
+}, [isStarted, isStarting]);
 
   const flap = useCallback(() => {
     if (!isStarted || isGameOver) return;
@@ -217,13 +219,10 @@ export function useFlappyBirdGame() {
     return clearAll;
   }, [
     isStarted,
-    isGameOver,
-    bird.x,
-    bird.y,
-    bird.size,
-    clearAll,
-    triggerHit,
-    playScore,
+  isGameOver,
+  clearAll,
+  triggerHit,
+  playScore,
   ]);
 
   const rotation = Math.max(-25, Math.min(75, bird.velocity * 6));

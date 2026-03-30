@@ -19,6 +19,6 @@ export const PIPE_GAP = 150;
 export const PIPE_SPEED = 3;
 
 export const GAME_TICK = 16;
-export const PIPE_SPAWN_MS = 1500;
+export const PIPE_SPAWN_MS = 1200;
 
 export const GAME_BOTTOM = GAME_HEIGHT - GROUND_HEIGHT;

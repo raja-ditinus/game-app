@@ -13,8 +13,11 @@ type Props = {
 };
 
 export default function Pipe({ pipe }: Props) {
-  const topPipeHeight = Math.max(40, pipe.gapY - PIPE_GAP / 2);
-  const bottomPipeTop = pipe.gapY + PIPE_GAP / 2;
+  const gapTop = pipe.gapY - PIPE_GAP / 2;
+  const gapBottom = pipe.gapY + PIPE_GAP / 2;
+
+  const topPipeHeight = Math.max(40, gapTop);
+  const bottomPipeTop = gapBottom;
   const bottomPipeHeight = Math.max(
     40,
     GAME_HEIGHT - GROUND_HEIGHT - bottomPipeTop,
@@ -22,14 +25,13 @@ export default function Pipe({ pipe }: Props) {
 
   return (
     <>
-      {/* Top Pipe */}
       <View
         style={[
           styles.pipe,
           {
-            height: topPipeHeight,
             left: pipe.x,
             top: 0,
+            height: topPipeHeight,
           },
         ]}
       >
@@ -38,14 +40,13 @@ export default function Pipe({ pipe }: Props) {
         <View style={styles.capBottom} />
       </View>
 
-      {/* Bottom Pipe */}
       <View
         style={[
           styles.pipe,
           {
-            height: bottomPipeHeight,
             left: pipe.x,
             top: bottomPipeTop,
+            height: bottomPipeHeight,
           },
         ]}
       >
